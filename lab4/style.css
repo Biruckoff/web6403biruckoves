@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #4682b4;
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #4682b4;
+}
+
+th {
+    background-color: #b0c4de;
+    padding: 10px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+}
+
+.city-image {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50vh;
+  background-color: #f0f8ff;
+}
+.box {
+  width: 400px;
+  height: 400px;
+  background-color: #f0f8ff;
+  color: #f0f8ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px;
+  padding: 0px;
+  background-color: #f0f8ff;
+}
+.grid-item {
+  background-color: #f0f8ff;
+  color: black;
+  text-align: center;
+  padding: 0px;
+  border-radius: 5px;
+}
+/* Анимация для элементов */
+@keyframes fadeInGrow {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) rotate(-10deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+/* Применение анимации */
+header, main, .grid-item, .box {
+    animation: fadeInGrow 1.5s ease-in-out;
+}
+
+/* Задержки для последовательности */
+header {
+    animation-delay: 0.2s;
+}
+
+main {
+    animation-delay: 0.4s;
+}
+
+.grid-item {
+    animation-delay: 0.6s;
+}
+
+.box {
+    animation-delay: 0.8s;
+}
